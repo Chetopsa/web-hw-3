@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySchedule</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+   
+
+</head>
+<body>
+    <nav>
+        <a href="/MySchedule.html">My Schedule</a>
+        <a href="/AboutMe.html">About Me</a>
+        <a href="/MyForm.html">My Form</a>
+        <a href="/EventLog.html">My New Events</a>
+    </nav>
+    
+    <h1><strong>My Schedule</strong></h1>
+    <div id="grid-container">
+        <table id="table2">
+            <tr>
+                <th>Day</th>
+                <th>Event</th>
+                <th>Time</th>
+                <th>Event Location</th>
+                <th>Phone Number</th>
+                <th>URL</th>
+            </tr>
+            <tr>
+                <td> Monday</td>
+                <td class ="names"> Csci 4131</td>
+                <td class ="times"> 11:15 - 12:30 am</td>
+                <td class ="locations"> Anderson hall, 257 S 19th Ave, Minneapolis, MN 55455</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://canvas.umn.edu/courses/412716" target="_blank">canvas link</a></td>
+            </tr>
+            <tr>
+                <td> Monday</td>
+                <td class ="names"> Csci 4511</td>
+                <td class ="times"> 1:00 - 2:15 pm</td>
+                <td class ="locations"> Nicholson Hall, 216 Pillsbury Dr SE, Minneapolis, MN 55455</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://canvas.umn.edu/courses/413021" target="_blank">canvas link</a></td>
+            </tr>
+            <tr>
+                <td> Tuesday</td>
+                <td class ="names"> Biol 1001</td>
+                <td class ="times"> 2:30 - 3:45 pm</td>
+                <td class ="locations">Wiley, 225 S 19th Ave, Minneapolis, MN 55455</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://canvas.umn.edu/courses/407184" target="_blank">canvas link</a></td>
+            </tr>
+            <tr>
+                <td> Tuesday</td>
+                <td class ="names"> Csci 3081</td>
+                <td class ="times"> 4:00 - 5:15 pm</td>
+                <td class ="locations"> 110 Union St SE, Minneapolis, MN 55455</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://canvas.umn.edu/courses/413250" target="_blank">canvas link</a></td>
+            </tr>
+            <tr>
+                <td> Wednesday</td>
+                <td class ="names"> Csci 4131</td>
+                <td class ="times"> 11:15 - 12:30 am</td>
+                <td class ="locations"> Anderson hall, 257 S 19th Ave, Minneapolis, MN 55455</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://canvas.umn.edu/courses/412716" target="_blank">canvas link</a></td>
+            </tr>
+            <tr>
+                <td> Wednesday</td>
+                <td class ="names"> Csci 4511</td>
+                <td class ="times"> 1:00 - 2:15 pm</td>
+                <td class ="locations">Nicholson Hall, 216 Pillsbury Dr SE, Minneapolis, MN 55455</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://canvas.umn.edu/courses/413021" target="_blank">canvas link</a></td>
+            </tr>
+            <!-- <tr>
+                <td> Thursday</td>
+                <td> Rocketry Meeting</td>
+                <td> 11:00 - 12:00 pm</td>
+                <td class ="names"> Civil Eng</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://rkt.aem.umn.edu/archive/midwest" target="_blank">competition link</a></td>
+            </tr> -->
+            <tr>
+                <td> Thursday</td>
+                <td class ="names"> Biol 1001 lab</td>
+                <td class ="times"> 12:20 - 2:15 pm</td>
+                <td class ="locations"> 420 Washington Ave SE, Minneapolis, MN 55455</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://canvas.umn.edu/courses/407184" target="_blank">canvas link</a></td>
+            </tr>
+            <tr>
+                <td> Thursday</td>
+                <td class ="names"> Biol 1001</td>
+                <td class ="times"> 2:30 - 3:45 pm</td>
+                <td class ="locations"> Wiley, 225 S 19th Ave, Minneapolis, MN 55455</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://canvas.umn.edu/courses/407184" target="_blank">canvas link</a></td>
+            </tr>
+            <tr>
+                <td> Thursday</td>
+                <td class ="names"> Csci 3081</td>
+                <td class ="times"> 4:00 - 5:15 pm</td>
+                <td class ="locations"> 110 Union St SE, Minneapolis, MN 55455</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://canvas.umn.edu/courses/413250" target="_blank">canvas link</a></td>
+            </tr>
+            <tr>
+                <td> Friday</td>
+                <td class ="names"> Csci 3081 lab</td>
+                <td class ="times"> 2:30 - 3:20 pm</td>
+                <td class ="locations"> 117 Pleasant St SE, Minneapolis, MN 55455</td>
+                <td> No Phone Number</td>
+                <td> <a href="https://canvas.umn.edu/courses/413250" target="_blank">canvas link</a></td>
+            </tr>
+        </table>
+        <div id="image_block">
+            <img id="bigger_image" src="/img/gophers-mascot.png" alt="Goldy">
+        </div>
+    </div>
+    <div id="map-canvas">
+        <div id="sidebar"></div>
+        <div id="map">
+            MAP
+        </div>
+        <div id="search-box">
+            
+            <fieldset>
+                <legend> Directions</legend>
+                <label for="placesInput">Destination</label>
+                <input id="placesInput" type="text" placeholder="Enter a destination">
+                <div>
+                    <input id="walk" type ="radio" name="transport" value="WALKING" checked>
+                    <label for="walk">Walk</label>
+                </div>
+                <div> 
+                    <input id="drive" type ="radio" name="transport" value="DRIVING">
+                    <label for="walk">Drive</label>
+                </div> 
+                <div>
+                    <input id="transit" type ="radio" name="transport" value="TRANSIT">
+                    <label for="walk">Transit</label>
+                </div>
+            </fieldset>
+            <button onclick="getDirections()">GO</button>
+            <div id="warnings_panel"></div>
+        </div>
+    </div>
+  
+    <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyAzT6-ldxhAWi5ZIKm20YtkVGobVCfbvmE&libraries=places&callback=initMap" async defer></script>
+    <script type="text/javascript" src="js/schedule.js"></script> 
+</body>
+</html>

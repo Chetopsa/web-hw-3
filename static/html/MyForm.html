@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Event Form</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+        <nav>
+            <a href="/MySchedule.html">My Schedule</a>
+            <a href="/AboutMe.html">About Me</a>
+            <a href="/MyForm.html">My Form</a>
+			<a href="/EventLog.html">My New Events</a>
+        </nav>
+		<h2>New Event Form</h2>
+	  
+		<form id="my-form" method="post" action = "/EventLog.html">
+			<p>
+				<label id="form-label">Event:
+				<input name = "event" type = "text" pattern="[a-zA-Z0-9]+" size = "25"
+					maxlength = "30" placeholder = "Class1" required>
+				</label>
+			</p>
+		
+            <p>
+				<label id="form-label">Day of Week:
+					<select id="days" name="days">
+						<option value="Monday" >Monday</option>
+						<option value="Tuesday">Tuesday</option>
+						<option value="Wedensday">Wedensday</option>
+						<option value="Thursday">Thursday</option>
+						<option value="Friday">Friday</option>
+						<option value="Saturday">Saturday</option>
+						<option value="Sunday">Sunday</option>
+					</select>
+				</label>
+            </p>
+			<p>
+				<label id="form-label">Start:
+				<input name = "start" type = "time" size = "25" required>
+				</label>
+			</p>
+			<p>
+				<label id="form-label">End:
+				<input name = "end" type = "time" size = "25" required>
+				</label>
+			</p>
+			<p>
+				<label id="form-label">Phone:
+				<input name = "phone" type = "text" pattern ="^[1-9][0-9]{2}-[0-9]{3}-[0-9]{4}$" size = "25"
+					maxlength = "30" placeholder = "999-999-9999" required>
+				</label>
+			</p>
+			<p>
+				<label id="form-label">Location:
+				<input name = "location" type = "text" size = "25"
+					maxlength = "30" placeholder = "Coffman" required>
+				</label>
+			</p>
+			<p>
+				<label id="form-label">Extra info:
+				<input name = "info" type = "text" size = "25"
+					maxlength = "30" placeholder = "anything" required>
+				</label>
+			</p>
+
+			<p>
+				<label id="form-label">Enter URL for extra info:
+				<input name = "url" type = "url" size = "25"
+					maxlength = "30" placeholder = "https://favoritePlace.com" required>
+				</label>
+			</p>
+			
+			<p>
+				<input type ="submit" value ="Submit">
+				<input type ="reset" value ="Clear">	
+			</p>
+		</form>	
+	</body>
+   
+</html>
