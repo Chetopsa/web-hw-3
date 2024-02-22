@@ -396,7 +396,7 @@ document.getElementById("getStockDataBtn").addEventListener("click", async funct
   // Call the timeSeries method to retrieve stock data
   let options = {
       symbol: symbol,
-      interval: "20min",
+      interval: "weekly",
       amount: 10,
   };
   var result = await stocks.timeSeries(options);

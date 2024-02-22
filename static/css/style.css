@@ -196,14 +196,17 @@ input { display: table-cell; }
     flex: 1 auto;
     margin-left: 10%;
     
+    
 }
 #my-form{
+   
     display: table;
     margin-left: 10%;
     margin-right: auto;
     border: 5px solid maroon;
     padding: 10px;
     background-color: aliceblue;
+    
 }
 #stock_input{
     max-width: fit-content;

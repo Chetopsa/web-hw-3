@@ -29,9 +29,9 @@ infowindowContent;
     constructor(map, origin) {
         this.origin = origin;
         this.map = map;
-        this.directionsService = new google.maps.DirectionsService();
-        this.directionsRenderer = new google.maps.DirectionsRenderer();
-        this.directionsRenderer.setMap(map);
+        // this.directionsService = new google.maps.DirectionsService();
+        // this.directionsRenderer = new google.maps.DirectionsRenderer();
+        // this.directionsRenderer.setMap(map);
         this.placesService = new google.maps.places.PlacesService(map);
         this.infowindow = new google.maps.InfoWindow();
         this.infowindowContent = document.getElementById("infowindow-content");
@@ -50,24 +50,24 @@ infowindowContent;
           // other map click event handlers from receiving the event.
           event.stop();
           if (event.placeId) {
-            this.calculateAndDisplayRoute(event.placeId);
+            //this.calculateAndDisplayRoute(event.placeId);
             this.getPlaceInformation(event.placeId);
           }
         }
       }
-      calculateAndDisplayRoute(placeId) {
-        const me = this;
+    //   calculateAndDisplayRoute(placeId) {
+    //     const me = this;
     
-        this.directionsService
-          .route({
-            origin: this.origin,
-            destination: { placeId: placeId },
-            travelMode: google.maps.TravelMode.WALKING,
-          })
-          .then((response) => {
-            me.directionsRenderer.setDirections(response);
-          })
-          .catch((e) => " do nothing")};
+    //     this.directionsService
+    //       .route({
+    //         origin: this.origin,
+    //         destination: { placeId: placeId },
+    //         travelMode: google.maps.TravelMode.WALKING,
+    //       })
+    //       .then((response) => {
+    //         me.directionsRenderer.setDirections(response);
+    //       })
+    //       .catch((e) => " do nothing")};
       getPlaceInformation(placeId) {
         const me = this;
     
