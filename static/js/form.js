@@ -1,4 +1,7 @@
 let map, infowindow, service;
+let directionsRenderer;
+let directionsService;
+
 
 function initMap() {
 const directionsRenderer = new google.maps.DirectionsRenderer();
@@ -75,6 +78,7 @@ infowindowContent;
             place.geometry &&
             place.geometry.location
           ) {
+            // only line that I know I need but when I delete other stuff it breaks
             document.getElementById("addressTextField").value = place.formatted_address;
           }
         });
