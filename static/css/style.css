@@ -1,6 +1,7 @@
 html{
     background-color: rgb(227, 226, 149);
     height: 100%;
+    width: 100%;
 }
 body{
     height: 100%;
@@ -128,14 +129,7 @@ table.clock td{
     grid-column: 2;
     padding: 20px;
 }
-#my-form{
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    border: 5px solid maroon;
-    padding: 10px;
-    background-color: aliceblue;
-}
+
 p     { display: table-row;  }
 input { display: table-cell; }
 #days{
@@ -191,6 +185,25 @@ input { display: table-cell; }
 } 
 #sidebar > div {
     padding: 0.5rem;
+}
+#form-container{
+    display: flex;
+    width: 90%;
+    height: 70%;
+    margin-right: 10%;
+}
+#form_map{
+    flex: 1 auto;
+    margin-left: 10%;
+    
+}
+#my-form{
+    display: table;
+    margin-left: 10%;
+    margin-right: auto;
+    border: 5px solid maroon;
+    padding: 10px;
+    background-color: aliceblue;
 }
 
 

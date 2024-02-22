@@ -90,6 +90,8 @@ def handle_req(url, body=None):
         return open("static/css/style.css").read(), "text/css"
     elif url == "/js/schedule.js":
         return open("static/js/schedule.js").read(), "text/javascript"
+    elif url == "/js/form.js":
+        return open("static/js/form.js").read(), "text/javascript"
     
     elif url == "/js/profile.js":
         return open("static/js/profile.js").read(), "text/javascript"

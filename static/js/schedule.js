@@ -79,9 +79,9 @@ function updateClock(element){
 let locations = document.getElementsByClassName("locations");
 let names = document.getElementsByClassName("names");
 let times = document.getElementsByClassName("times");
+//check elements
 for (var i = 0; i < locations.length; i++) {
     var element = locations[i];
-    // Do something with each element, for example:
     console.log(element.textContent);
 }
 
@@ -271,4 +271,4 @@ function showSteps(directionResult) {
 table.addEventListener('mouseover', addImageToCell);
 table.addEventListener('mouseout', removeImageFromCell);
 console.log("hello\n");
-initMap();
+// initMap();
