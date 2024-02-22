@@ -1,4 +1,6 @@
 let map, infowindow, service;
+let directionsRenderer;
+let directionsService;
 
 function initMap() {
 const directionsRenderer = new google.maps.DirectionsRenderer();
