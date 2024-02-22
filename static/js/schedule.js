@@ -271,4 +271,4 @@ function showSteps(directionResult) {
 table.addEventListener('mouseover', addImageToCell);
 table.addEventListener('mouseout', removeImageFromCell);
 console.log("hello\n");
-// initMap();
+initMap();

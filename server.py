@@ -79,6 +79,8 @@ def handle_req(url, body=None):
         return open("static/html/MyForm.html").read(), "text/html"
     elif url == "/AboutMe.html":
         return open("static/html/AboutMe.html").read(), "text/html"
+    elif url == "/stockQuotes.html":
+        return open("static/html/stockQuotes.html").read(), "text/html"
     elif url == "/img/gophers-mascot.png":
         return open("static/img/gophers-mascot.png", "br").read(), "image/png"
     # NOTE: These files may be different for your server, but we include them to
@@ -92,9 +94,10 @@ def handle_req(url, body=None):
         return open("static/js/schedule.js").read(), "text/javascript"
     elif url == "/js/form.js":
         return open("static/js/form.js").read(), "text/javascript"
-    
     elif url == "/js/profile.js":
         return open("static/js/profile.js").read(), "text/javascript"
+    elif url == "/js/stocks.js":
+        return open("static/js/stocks.js").read(), "text/javascript"
     elif url == "/img/Dan1.jpeg":
         return open("static/img/Dan1.jpeg", "br").read(), "image/jpeg"
     elif url == "/img/Lind.jpg":
@@ -152,6 +155,7 @@ def handle_req(url, body=None):
                       <a href="/AboutMe.html">About Me</a>
                       <a href="/MyForm.html">Form Input</a>
                       <a href="/EventLog.html">My New Events</a>
+                      <a href="/stockQuotes.html">Stock Quotes</a>
                   </nav>
                 </header>
                 <h1> My New Events </h1>

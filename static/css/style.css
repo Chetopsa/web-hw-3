@@ -205,5 +205,17 @@ input { display: table-cell; }
     padding: 10px;
     background-color: aliceblue;
 }
-
+#stock_input{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+#stock_info{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid maroon 3px;
+    padding: 1px;
+}
 

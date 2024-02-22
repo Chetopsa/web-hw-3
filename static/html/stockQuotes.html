@@ -15,6 +15,14 @@
         <a href="/EventLog.html">My New Events</a>
         <a href="/stockQuotes.html">Stock Quotes</a>
     </nav>
-    <h1>No Entries yet</h1>
+    <h1> Find Stock Symbol</h1>
+    <div id="stock_input">
+        <input id="symbolInput" type="text" placeholder="Enter stock ticker symbol">
+        <button id="getStockDataBtn">Get Stock Data</button><br>
+    </div>
+    <div id="stock_info">
+        <textarea id="stockDataTextarea" rows="10" cols="50" readonly></textarea>
+    </div>
+    <script type="text/javascript" src="js/stocks.js"></script>
 </body>
 </html>
