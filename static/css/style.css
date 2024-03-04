@@ -178,6 +178,28 @@ input { display: table-cell; }
     background-color: white;
 
 }
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+button {
+    width: 100%;
+    padding: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
 #warnings_panel{
     float: right;
     margin-right: 2%;

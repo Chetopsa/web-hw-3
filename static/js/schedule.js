@@ -101,7 +101,6 @@ function initMap() {
   });
   infowindow = new google.maps.InfoWindow();
   // Create a renderer for directions and bind it to the map.
-
   var rendererOptions = {
     map: map,
     panel: document.getElementById("sidebar")
@@ -166,15 +165,23 @@ function createMarker(place, name, time) {
       map,
       position: place.geometry.location,
     });
+    markerArray.push(marker);
   
     google.maps.event.addListener(marker, "click", () => {
-      infowindow.setContent(name + " | " + time +" | "+place.name);
+
+      if(name == null || time == null){
+        let address = place.vicinity || place.formatted_address || "Address not available";
+        infowindow.setContent(place.name + ", " + address);
+      } else{
+        infowindow.setContent(name + " | " + time +" | "+place.name);
+      }
       infowindow.open(map, marker);
     });
     // google.maps.event.addListener(marker, "mouseout", () => {
     //     infowindow.close();
     // });
-  }
+    
+}
 let transportMode;
 function getDirections(){
     // Get the transportation mode
@@ -202,12 +209,15 @@ function getDirections(){
         handleLocationError(false, infoWindow, map.getCenter());
       }
 }
-
-function calculateDirections(lat, lng){
-    console.log(lat+ " "+ lng);
-    for (i = 0; i < markerArray.length; i++) {
+function clearMarkers() {
+    for (let i = 0; i < markerArray.length; i++) {
         markerArray[i].setMap(null);
     }
+    markerArray = [];
+}
+function calculateDirections(lat, lng){
+    console.log(lat+ " "+ lng);
+    clearMarkers();
     let start = new google.maps.LatLng(lat, lng);
     let input = document.getElementById("placesInput").value;
     var req = {
@@ -266,6 +276,35 @@ function showSteps(directionResult) {
       stepDisplay.open(map, marker);
     });
   }
+function showNearbyPlaces() {
+    var placeType = document.getElementById('placeType').value;
+    var searchRadius = parseInt(document.getElementById('searchRadius').value);
+    var mapBounds = map.getBounds();
+    var placesService = new google.maps.places.PlacesService(map);
+    //get search radius
+    if (placeType === 'other') {
+        placeType = document.getElementById('otherCategory').value.toLowerCase();
+        placesService.nearbySearch({
+            keyword: placeType,
+            bounds: mapBounds,
+            radius: searchRadius
+        }, displayNearbyPlaces);
+    } else{
+        placesService.nearbySearch({
+            type: [placeType],
+            bounds: mapBounds,
+            radius: searchRadius
+        }, displayNearbyPlaces);
+    }
+}
+function displayNearbyPlaces(results, status) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
+        clearMarkers();
+        for (let i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+        }
+    }
+}
 
 //_______________Event Listeners_________________
 table.addEventListener('mouseover', addImageToCell);

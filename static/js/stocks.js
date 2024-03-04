@@ -386,21 +386,23 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 /******/ ]);
 });
 
+
 // ______________________________MY Edits_____________________________________
 document.getElementById("getStockDataBtn").addEventListener("click", async function(){
   // get stock symbol
   const symbol = document.getElementById("symbolInput").value;
   //create new instance of class
   var stocks = new Stocks("15ETGCHMK1GU8L8Y");
-  console.log("sup")
-  // Call the timeSeries method to retrieve stock data
+  console.log("works")
+  // select stock options
   let options = {
       symbol: symbol,
-      interval: "weekly",
-      amount: 10,
+      interval: "1min",
+      amount: 1,
   };
   var result = await stocks.timeSeries(options);
   var resultJson = JSON.stringify(result);
-  // Display the retrieved data in the textarea
+  // diplay data in the text area
   document.getElementById("stockDataTextarea").value = resultJson;
+  
 });

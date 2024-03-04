@@ -128,7 +128,28 @@
             MAP
         </div>
         <div id="search-box">
-            
+            <fieldset>
+                <legend>Find Nearby Places</legend>
+                <label for="placeType">Place Type</label>
+                <select id="placeType">
+                    <option value="restaurant">Restaurant</option>
+                    <option value="cafe">Cafe</option>
+                    <option value="bar">Bar</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="gym">Gym</option>
+                    <option value="other">Other</option>
+                </select>
+                <br>
+                <div id="otherCategoryInput">
+                    <label for="otherCategory" placeholder="other category">Other Category</label>
+                    <input type="text" id="otherCategory">
+                </div>
+
+                <label for="searchRadius">Radius (in meters)</label>
+                <input type="number" id="searchRadius" value="1000" min="100" max="5000">
+            </fieldset>
+            <button onclick="showNearbyPlaces()">Search Nearby Places</button>
+            <br>
             <fieldset>
                 <legend> Directions</legend>
                 <label for="placesInput">Destination</label>
@@ -151,7 +172,7 @@
         </div>
     </div>
   
-    <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyAzT6-ldxhAWi5ZIKm20YtkVGobVCfbvmE&libraries=places&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzT6-ldxhAWi5ZIKm20YtkVGobVCfbvmE&libraries=places&callback=initMap" async defer></script>
     <script type="text/javascript" src="js/schedule.js"></script> 
 </body>
 </html>

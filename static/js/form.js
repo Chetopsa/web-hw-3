@@ -4,12 +4,12 @@ let directionsService;
 
 
 function initMap() {
-const directionsRenderer = new google.maps.DirectionsRenderer();
-  const directionsService = new google.maps.DirectionsService();
   map = new google.maps.Map(document.getElementById("form_map"), {
+    center: { lat: 44.9727, lng: -93.23540000000003 },
     zoom: 15,
-    center: { lat: 44.9727, lng: -93.23540000000003 }
   });
+  const directionsRenderer = new google.maps.DirectionsRenderer();
+  const directionsService = new google.maps.DirectionsService();
   directionsRenderer.setMap(map);
 
   new ClickEventHandler(map, origin);
@@ -85,4 +85,4 @@ infowindowContent;
       }
     }
 console.log("sup");
-window.initMap = initMap;
+initMap();
